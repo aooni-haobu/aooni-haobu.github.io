@@ -1,0 +1,6 @@
+[
+null,
+{"id":1,"battlerName":"","characterIndex":0,"characterName":"$ib_00","classId":1,"equips":[],"faceIndex":1,"faceName":"all","traits":[],"initialLevel":1,"maxLevel":99,"name":"イヴ","nickname":"","note":"","profile":""},
+{"id":2,"battlerName":"","characterIndex":0,"characterName":"$garry_00","classId":1,"equips":[],"faceIndex":2,"faceName":"all","traits":[],"initialLevel":1,"maxLevel":99,"name":"ギャリー","nickname":"","note":"","profile":""},
+{"id":3,"battlerName":"","characterIndex":0,"characterName":"$mary_00","classId":1,"equips":[],"faceIndex":3,"faceName":"all","traits":[],"initialLevel":1,"maxLevel":99,"name":"メアリー","nickname":"","note":"","profile":""}
+]
