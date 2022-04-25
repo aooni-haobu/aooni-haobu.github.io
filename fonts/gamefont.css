@@ -1,0 +1,10 @@
+@font-face {
+    font-family: GameFont;
+    src: url("JF-Dot-AyuMin18.ttf");
+}
+
+.IIV::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+}
