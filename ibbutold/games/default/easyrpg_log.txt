@@ -1,0 +1,27 @@
+[2022-05-05 21:02:33] Debug: EasyRPG Player 0.7.0 (git~42@897b6cd0, 2022-02-05) started
+[2022-05-05 21:02:33] Debug: ==========================================================
+[2022-05-05 21:02:33] Debug: Clock: StdSteady steady=true period=ns (1 / 1000000000)
+[2022-05-05 21:02:33] Debug: Seeded the RNG with 1651755752.
+[2022-05-05 21:02:33] Debug: CLI: --window 
+[2022-05-05 21:02:33] Debug: SDL2: RendererInfo hw=true sw=false vsync=true
+[2022-05-05 21:02:33] Debug: SDL2: Detected format (0) SDL_PIXELFORMAT_ARGB8888 : rank=(2)
+[2022-05-05 21:02:33] Debug: SDL2: Selected Pixel Format SDL_PIXELFORMAT_ARGB8888
+[2022-05-05 21:02:33] Debug: Detected encoding: Big5
+[2022-05-05 21:02:33] Debug: Game and Save Directory:
+[2022-05-05 21:02:33] Debug: 1: [Native] 
+[2022-05-05 21:02:33] Debug: Loading game Ib_1.07
+[2022-05-05 21:02:33] Debug: Game does not need RTP (FullPackageFlag=1)
+[2022-05-05 21:02:33] Debug: Using RPG2k Interpreter
+[2022-05-05 21:02:33] Debug: MP3 file (asioto.mp3) found
+[2022-05-05 21:02:33] Debug: RPG2k >= v1.50 / RPG2k3 >= v1.05 detected
+[2022-05-05 21:02:33] Debug: Engine configured as: 2k=true 2k3=false MajorUpdated=true Eng=false
+[2022-05-05 21:02:33] Debug: Patch configuration: dynrpg=false maniac=false
+[2022-05-05 21:02:33] Debug: Cannot find: ./ExFont
+[2022-05-05 21:02:33] Debug: ExFont loading failed: RPG_RT.exe not found
+[2022-05-05 21:02:40] Debug: Starting new game
+[2022-05-05 21:02:40] Debug: Loaded Map Map0002.lmu
+[2022-05-05 21:02:40] Debug: Tree: �
+[2022-05-05 21:02:41] Debug: glyph not found: 0xef7b
+[2022-05-05 21:02:55] Debug: glyph not found: 0xef7b [3x]
+[2022-05-05 21:02:55] Debug: Loaded Map Map0001.lmu
+[2022-05-05 21:02:55] Debug: Tree: _
