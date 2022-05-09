@@ -1,0 +1,324 @@
+body{
+	font-style:normal;
+	font-weight:normal;
+	font-size:medium;
+	text-align:center;
+	color:#ffffff;
+	background-color:#000000;
+}
+
+img{
+	border:0;
+}
+
+a:link {
+	color:#8c9bff;
+	font-style:normal;
+	text-decoration:none;
+}
+a:visited {
+	color:#ff8aad;
+	text-decoration:none;
+}
+a:hover {
+	color:#ff0000;
+	font-style:normal;
+	text-decoration:underline;
+}
+a:active {
+	text-decoration:none;
+}
+
+/* ==================== レイアウト ==================== */
+
+#container	{width: 925px;
+	margin: auto;}
+
+#sns		{width: 925px;
+	text-align: left;
+	border-bottom: solid 1px #ffffff;
+	overflow: hidden;}
+
+#head		{width: 925px;
+	height: 100px;}
+
+#head-left	{width: 197px;
+	height: 100px;
+	float: left;}
+
+#title		{line-height: 100px;
+	text-align: left;
+	font-size: 1em;}
+
+#title a:link {color:white;}
+#title a:visited {color:white;}
+#title a:hover {
+	color:#ff0000;
+	font-style:normal;
+	text-decoration:underline;
+}
+#title a:active {text-decoration:none;}
+
+#head-right	{width: 728px;
+	float: right;}
+
+#head-right-in{padding: 5px 0;
+	overflow: hidden;}
+
+#wrapper	{width: 100%;
+	overflow: hidden;}
+
+#main700	{width: 700px;
+	text-align: center;
+	float: left;}
+
+#main615	{width: 615px;
+	text-align: center;
+	float: left;}
+
+#main-in	{
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#side225	{width: 225px;
+	float: right;}
+
+#side310	{width: 310px;
+	float: right;}
+
+#side-in	{padding: 10px 0;
+	text-align: right;}
+
+#foot	{clear: both;
+	text-align: right;
+	border-top: solid 1px white;}
+
+/* ========メニューバー============= */
+
+.menu	{font-size: 0.8em;
+	width: 924px;
+	height: 30px;
+	background-color: black;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px 0 1px 1px;}
+
+.menu ul	{margin: 0;
+	padding: 0;}
+
+.menu li	{list-style-type: none;
+	float: left;}
+
+.menu li a	{display: block;
+	width: 153px;
+	line-height: 30px;
+	border-right: solid 1px white;
+	color: white;
+	text-align: center;
+	text-decoration: none;}
+
+.menu li a:hover	{background-color: white;
+	color: black;}
+
+/* ==================== games ==================== */
+
+.games{
+	width:700px;
+	text-align:left;
+	overflow: hidden;
+}
+
+.imagebox {
+   background-color: #1a1a1a;
+   width: 130px;
+   float: left;
+   margin: 5px;
+   display: block;
+}
+
+.imagebox a{display: block;
+	color: white;
+	text-decoration: none;}
+
+.imagebox a:hover {background-color: white;
+	color:black;}
+
+.imagebox a i{
+	text-align: center;
+	display: block;
+	width: 130px;
+	height: 125px;
+	background-image:url(sprites2012063001.png);
+	overflow: hidden;
+}
+.game1	{background-position: 0 0;}
+.game2	{background-position: -130px 0;}
+.game3	{background-position: -260px 0;}
+.game4	{background-position: -390px 0;}
+.escape1	{background-position: 0 -130px;}
+.escape2	{background-position: -130px -130px;}
+.escape3	{background-position: -260px -130px;}
+.escape4	{background-position: -390px -130px;}
+.iphone1	{background-position: 0 -520px;}
+.se	{background-position: 0 -260px;}
+.blog	{background-position: 0 -390px;}
+.twitter_pic	{background-position: -130px -390px;}
+.pixiv	{background-position: -260px -390px;}
+.link	{background-position: -390px -390px;}
+.webalizer	{background-position: -520px -390px;}
+.oushou	{background-position: 0px -650px;}
+.driver	{background-position: -130px -650px;}
+
+.imagebox a span.caption{
+	text-align: center;
+	padding: 5px;
+	font-size: 0.8em;
+	display: block;
+	overflow: hidden;
+}
+
+/* ==================== sidebox ==================== */
+
+.othergames {width: 100%;
+	margin: 0 15px;
+	text-align: left;
+	overflow: hidden;}
+
+.sidebox {
+   background-color: #1a1a1a;
+   widows: 130px;
+   height: 130px;
+   float: left;
+   margin: 5px;
+   display: block;
+}
+
+.sidebox a{display: block;
+	color: white;
+	text-decoration: none;}
+
+.sidebox a:hover {background-color: white;
+	color:black;}
+
+.sidebox a i{
+	display: block;
+	width: 130px;
+	height: 130px;
+	background-image:url(sprites2012063001.png);
+}
+
+/* ==================== 見出し ==================== */
+
+.midasi	{
+	font-size: 0.8em;
+	background-color: black;
+	height: 20px;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.midasi a	{
+	display: block;
+	width: 100%;
+	color: white;
+	text-decoration: none;
+}
+
+.midasi a:hover	{
+	background-color: white;
+	color: black;
+}
+
+.adbox	{
+	width: 100%;
+	height: 16px;
+	padding: 2px 0;
+	text-align: center;
+	border: solid 1px white;
+}
+
+/* ==================== コンテンツ ==================== */
+
+.contents	{
+	margin-bottom: 10px;
+}
+
+.gametitle	{
+	height: 50px;
+	line-height: 50px;
+	font-size: 1em;
+	border-top: solid 1px white;
+	border-bottom: solid 1px white;
+}
+
+.flash	{
+	padding-top: 60px;
+}
+
+.lefty	{
+	text-align: left;
+}
+
+h2	{
+	font-size: medium;
+	border-bottom: solid 1px white;
+}
+
+.danraku{
+	padding: 10px;
+}
+
+.contents p{
+	padding: 2px 0;
+	margin: 0;
+}
+.black{
+	color: black;
+}
+
+p.setumei{
+	padding: 5px 0;
+}
+
+.contents ul	{
+	margin: 0;
+	padding: 0;
+}
+
+.contents li	{
+	list-style-type: none;
+	padding: 2px;
+}
+
+/* ==================== フッター ==================== */
+
+#foot p	{font-size: 0.75em;
+	margin: 2px;}
+
+/* ======================================== */
+
+.block{
+margin:1px 0;
+}
+.block div{
+float:left;
+margin-right: 5px;
+}
+.clearfix:after{
+clear: both;
+content: ".";;
+display: block;
+height: 0;
+visibility: hidden;
+}
+.clearfix{
+min-height: 1px;
+}
+.clear{
+clear:both;
+}
