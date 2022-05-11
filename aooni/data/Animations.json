@@ -1,0 +1,4 @@
+[
+null,
+{"id":1,"animation1Hue":0,"animation1Name":"bang","animation2Hue":0,"animation2Name":"","frames":[[[0,0,0,300,0,0,255,0]],[[1,0,0,300,0,0,255,0],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0]],[[4,0,0,300,0,0,255,0]],[[3,0,0,300,0,0,255,0]],[[2,0,0,300,0,0,255,0]]],"name":"バン（音なし）","position":1,"timings":[{"flashColor":[255,255,255,255],"flashDuration":2,"flashScope":0,"frame":0,"se":null}]}
+]
