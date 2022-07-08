@@ -1,0 +1,79 @@
+/* CSS Document */
+
+.y_gcss_ovrtr_au {
+	width: 175px;
+	background-color: #FFF;
+	visibility: visible; 
+	border:1px solid #000;
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	z-index: 2147483647;
+	top: 0px;
+}
+
+.y_gcss_ovrtr_au_cbox {
+	width: 173px;
+	background-color: #FFF;
+	border-top:1px solid #CCC;
+	margin: 0px;
+	padding: 6 0 6 0px;
+	top: 0px;
+}
+
+.y_gcss_ovrtr_msthd {
+	width: 175px;
+	background-color: #FFF;
+	visibility: visible;
+	border:1px solid #000;
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	z-index: 2147483647;
+	top: 0px;
+}
+
+.y_gcss_ovrtr_cntr {
+	width: 175px;
+	background-color: #FFF;
+	visibility: visible;
+	padding: 0px;
+	margin: 0px;
+	z-index: 2147483647;
+	top: 0px;
+}
+
+.y_gcss_glrnk {
+	width: 170px;
+	background-color: #FFF;
+	visibility: visible;
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	z-index: 3;
+	top: 35px;
+	left: 0px;
+}
+
+
+/*
+     FILE ARCHIVED ON 11:57:33 Mar 25, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 11:55:19 Jul 08, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 2001.504
+  exclusion.robots: 0.115
+  exclusion.robots.policy: 0.105
+  cdx.remote: 0.074
+  esindex: 0.01
+  LoadShardBlock: 72.979 (3)
+  PetaboxLoader3.datanode: 105.56 (5)
+  CDXLines.iter: 17.79 (3)
+  load_resource: 244.138 (2)
+  PetaboxLoader3.resolve: 152.406 (2)
+*/

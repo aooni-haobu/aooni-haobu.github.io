@@ -1,0 +1,229 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+var geovisitFlg;
+var onloadFlg;
+
+var url = 'http://' + document.domain+location.pathname;
+var ref = document.referrer;
+
+var siteHeight = 0;
+
+function canUseGetBoundingClientRect() {
+
+	var ua = window.navigator.userAgent.toLowerCase();
+	var ver = window.navigator.appVersion.toLowerCase();
+
+	if (ua.indexOf("msie") != -1) {
+
+		if (ver.indexOf("msie 7.") != -1) {
+			return false
+		} else if (ver.indexOf("msie 8.") != -1) {
+			return false
+		} else if (ver.indexOf("msie 9.") != -1) {
+			return false
+		}
+
+	}
+
+	return true;
+
+}
+
+/* exec */
+
+function geovisit() {
+
+	if (geovisitFlg) { return; }
+	geovisitFlg = true;
+
+	if (adFlg === 'gg') {
+		writeUAd();
+	}
+
+}
+
+if (window.addEventListener) {
+	window.addEventListener("load", execWriteUadOnload, false);
+} else if (window.attachEvent) {
+	window.attachEvent("onload", execWriteUadOnload);
+} else {
+	window.onload = execWriteUadOnload;
+}
+
+function execWriteUadOnload() {
+
+	if (onloadFlg) { return; }
+	onloadFlg = true;
+
+	if (adFlg === 'sq') {
+		writeUAd();
+	}
+
+}
+
+function checkUad() {
+
+	var ua = window.navigator.userAgent.toLowerCase();
+	var ver = window.navigator.appVersion.toLowerCase();
+	if (ua.indexOf("msie") != -1) {
+		if (ver.indexOf("msie 7.") != -1 && ver.indexOf("trident") == -1) {
+			return false;
+		}
+	}
+
+	var adElement = document.getElementById("y_gc_div_adcntr");
+	if (adElement == null) {
+		return false;
+	}
+
+	var adFrame = adElement.getElementsByTagName("iFrame");
+	if (adFrame.length == 0) {
+		return false;
+	}
+
+	if (adFrame.item(0).width == 0 && adFrame.item(0).height == 0) {
+		return false;
+	}
+
+	return true;
+
+}
+
+/* writeAd */
+
+//uad
+
+function writeUAd() {
+
+	if (!checkUad()) { return; }
+
+	var doubleMdRecWrapper = document.createElement('div');
+	doubleMdRecWrapper.id = 'ydn-double-md-rec-wrapper';
+	doubleMdRecWrapper.style.textAlign = 'center';
+	doubleMdRecWrapper.style.width = '100%';
+	doubleMdRecWrapper.style.left = '0';
+
+	if (adFlg === 'sq') {
+
+		measureSiteHeight();	// siteHeight
+		var sqHeight = getSqBottomHeight();
+
+		if (siteHeight < sqHeight) {
+			siteHeight = sqHeight
+		}
+
+		doubleMdRecWrapper.style.position = 'absolute';
+		doubleMdRecWrapper.style.top = siteHeight + 'px';
+	}
+
+	var uadWrapper = document.createElement('div');
+	uadWrapper.id = 'y_gc_div_uad_wrapper';
+
+	document.body.appendChild(doubleMdRecWrapper);
+	doubleMdRecWrapper.appendChild(uadWrapper);
+
+	var uadElement = getUAd();
+	uadWrapper.appendChild(uadElement);
+
+}
+
+function getUAd() {
+
+	var element = document.createElement('div');
+	element.id = 'y_gc_div_uadcntr';
+	element.innerHTML = "<center><iframe style=\"border:none;\" src=\"http://bc.geocities.yahoo.co.jp/bc/uad/i=" + jps + "&u=" + encodeURIComponent(url) + '&ref=' + encodeURIComponent(ref) + '&ad=' + encodeURIComponent(adFlg) + "\" width=615 height=480 border=0 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no allowtransparency=\"true\"></iframe></center>";
+	element.style.visibility = "visible";
+	element.style.position = "relative";
+	element.style.zIndex = 2147483647;
+	element.style.clear = "both";
+
+	return element;
+
+}
+
+function getSqBottomHeight() {
+
+	var divAu1 = document.getElementById("y_gc_div_au1");
+	if (divAu1) {
+		var sqRect = divAu1.getBoundingClientRect();
+		var sqbottomHeight = sqRect.top + sqRect.height;
+	}
+
+	var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+	sqbottomHeight += scrollTop;
+	return sqbottomHeight;
+
+}
+
+function measureSiteHeight() {
+
+	if (!canUseGetBoundingClientRect()) {
+		var bodyHeight = Math.max.apply( null, [document.body.clientHeight, document.body.scrollHeight, document.documentElement.scrollHeight, document.documentElement.clientHeight]);
+		if ( siteHeight < bodyHeight ) {
+			siteHeight = bodyHeight;
+		}
+	} else {
+		getSiteHeightFromElem(document.body);
+		var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+		siteHeight += scrollTop;
+	}
+
+}
+
+function getSiteHeightFromElem(elem) {
+
+	if (elem.getBoundingClientRect) {
+
+		var children = elem.children;
+
+		for (var i = 0; i < children.length; i++) {
+
+			var bottomY = 0;
+
+			var rect = children[i].getBoundingClientRect();
+			bottomY = rect.top + rect.height;
+
+			if ( siteHeight < bottomY ) {
+				siteHeight = bottomY;
+			}
+			getSiteHeightFromElem(children[i]);
+
+		}
+
+	}
+
+}
+
+
+}
+/*
+     FILE ARCHIVED ON 03:29:42 Mar 25, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 11:55:20 Jul 08, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 953.763
+  exclusion.robots: 0.126
+  exclusion.robots.policy: 0.114
+  RedisCDXSource: 15.249
+  esindex: 0.007
+  LoadShardBlock: 129.694 (3)
+  PetaboxLoader3.datanode: 146.983 (5)
+  CDXLines.iter: 68.928 (3)
+  load_resource: 828.516 (2)
+  PetaboxLoader3.resolve: 760.859 (2)
+*/
